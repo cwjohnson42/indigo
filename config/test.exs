@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :indigo, Indigo.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "indigo_app",
+  password: "indigo_app",
   hostname: "localhost",
   database: "indigo_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,

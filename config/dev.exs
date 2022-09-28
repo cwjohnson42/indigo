@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :indigo, Indigo.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "indigo_app",
+  password: "indigo_app",
   hostname: "localhost",
   database: "indigo_dev",
   stacktrace: true,
