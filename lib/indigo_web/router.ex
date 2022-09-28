@@ -20,6 +20,12 @@ defmodule IndigoWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", IndigoWeb.Api, as: :api do
+    pipe_through :api
+
+    resources "/natures", NatureController, only: [:index, :show]
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", IndigoWeb do
   #   pipe_through :api
