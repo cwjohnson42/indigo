@@ -4,9 +4,9 @@ defmodule NatureTest do
 
   test "list natures" do
     assert Nature.list() === [
-      %Nature{name: "bashful"},
-      %Nature{name: "brave", inc: :atk, dec: :spd}
-    ]
+             %Nature{name: "bashful"},
+             %Nature{name: "brave", inc: :atk, dec: :spd}
+           ]
   end
 
   test "get nature" do
