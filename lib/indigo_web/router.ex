@@ -24,6 +24,7 @@ defmodule IndigoWeb.Router do
     pipe_through :api
 
     resources "/natures", NatureController, only: [:index, :show]
+    resources "/abilities", AbilityController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.
