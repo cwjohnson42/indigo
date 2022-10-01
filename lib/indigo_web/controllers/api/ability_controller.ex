@@ -1,14 +1,14 @@
-defmodule IndigoWeb.Api.NatureController do
+defmodule IndigoWeb.Api.AbilityController do
   use IndigoWeb, :controller
-  alias Indigo.Nature, as: Nature
+  alias Indigo.Ability, as: Ability
 
   @spec index(Plug.Conn.t(), any) :: Plug.Conn.t()
   def index(conn, _params) do
-    json(conn, Nature.list())
+    json(conn, Ability.list())
   end
 
   @spec show(Plug.Conn.t(), %{String.t() => String.t()}) :: Plug.Conn.t()
   def show(conn, %{"id" => name}) do
-    json(conn, Nature.get(name))
+    json(conn, Ability.get(name))
   end
 end
