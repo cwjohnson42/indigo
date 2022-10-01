@@ -4,7 +4,7 @@ defmodule Indigo.Growth do
   """
   @type growth :: :erratic | :fast | :fluctuating | :medium_fast | :medium_slow | :slow
 
-  @spec list :: growth
+  @spec list :: [growth,...]
   def list do
     [
       :erratic,
@@ -15,15 +15,15 @@ defmodule Indigo.Growth do
     ]
   end
 
-  # @spec max_xp(growth) :: integer
-  def max_hp(growth) do
+  @spec max_xp(growth) :: integer
+  def max_xp(growth) do
     case growth do
-      :erratic -> 600000
-      :fast -> 800000
-      :fluctuating -> 1640000
-      :medium_fast -> 1000000
-      :medium_slow -> 1059860
-      :slow -> 1250000
+      :erratic -> 600_000
+      :fast -> 800_000
+      :fluctuating -> 1_640_000
+      :medium_fast -> 1_000_000
+      :medium_slow -> 1_059_860
+      :slow -> 1_250_000
     end
   end
 end
